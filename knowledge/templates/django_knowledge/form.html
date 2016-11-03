@@ -1,5 +1,4 @@
 {% load i18n %}
-{% load url from future %}
 
 <form {% if submit_url %}action="{{ submit_url }}"{% endif %} method="post" class="dk-form">
   {% csrf_token %}
@@ -8,7 +7,7 @@
     <div class="field-wrapper field-{{ field.html_name }}">
       <div class="field-label">
         <label for="id_{{ field.html_name }}">{{ field.label }}: {% if field.field.required %}<small><em class="quiet">({% trans "required" %})</em></small>{% endif %}</label>
-        
+
         {% if field.field.help_text %}
           <br />
           <small class="help-text">{{ field.field.help_text }}</small>

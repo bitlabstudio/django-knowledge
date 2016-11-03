@@ -1,9 +1,5 @@
 {% extends 'django_knowledge/inner.html' %}
-
-{% load i18n %}
-{% load markup %}
-{% load knowledge_tags %}
-{% load url from future %}
+{% load i18n markup knowledge_tags %}
 
 {% block title %}{{ question.title }}{% endblock title %}
 
@@ -58,9 +54,9 @@
   {% endfor %}
 
 
-  <br/> 
+  <br/>
   <hr class="light"/>
-  <br/> 
+  <br/>
 
 
   {% if form %}

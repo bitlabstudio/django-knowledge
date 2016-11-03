@@ -1,7 +1,5 @@
 {% extends 'django_knowledge/inner.html' %}
-
 {% load i18n %}
-{% load url from future %}
 
 {% load knowledge_tags %}
 
@@ -20,7 +18,7 @@
   {% if not questions.paginator.count %}
     <p class="center"><em>{% trans "No results found." %}</em></p>
   {% endif %}
-  
+
   <hr class="light"/>
 
   <div class="center">
